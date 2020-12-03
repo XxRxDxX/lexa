@@ -7,10 +7,10 @@ Class QuEquation extends Equation implements EquationInterface
 
     protected function dis($a, $b, $c)
     {
-        $x = ($b ** 2) - 4 * $a * $c;
+        $x = (($b ** 2) - (4 * $a * $c));
         return $x;
     }
-    
+
     public function solve($a, $b, $c)
     {
         $x = $this->dis($a, $b, $c);
