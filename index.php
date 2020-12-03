@@ -1,34 +1,45 @@
-<?php
-ini_set('display_errors', 1);
- error_reporting (-1); 
- 
-class A{
+<?php 
+Class A
+{
+	public function solve($a, $b)
+	{
+		if($a==0)
+		{
+			return null;
+		}
+	$x=-($b/(2*$a));
+	return $x;
+	}
 }
-
-class B extends A{
-    public function __construct($a){
-        $this->a = $a;
-    }
-
-    protected $a;
+Class B extends A
+{
+	protected function dis($a, $b, $c)
+	{
+		$d=($b*$b-(4*$a*$c));
+		return $d;
+	}
+	public function korni($a, $b, $c)
+	{
+		if ($a==0) 
+		{
+			return $this->solve($b,$c)
+		}
+		$d=$this->dis($a, $b, $c);
+		if($d<0)
+		{
+			return null;
+		}
+		if($d==0)
+		{
+			$x=(-($b)/(2*$a));
+			return $x;
+		}
+		$a=(((-$b)+sqrt($d))/(2*$a));
+		$b=(((-$b)-sqrt($d))/(2*$a));
+		return array($a, $b);
+	}
 }
-
-class C extends B{
-    public function __construct($a, $b, $c, $d){
-        $this->b = $b;
-        $this->c = $c;
-        $this->d = $d;
-        parent::__construct($a);
-    }
-
-    protected $b;
-    protected $c;
-    protected $d;
-}
-
-$a1 = new A();
-$a2 = new A();
-$a3 = new A();
-$b4 = new B($a1);
-$c5 = new C($a1,$a2,$a3,$b4);
+$a=new A();
+$b=new B();
+var_dump($b->korni(2,1,0));
 ?>
