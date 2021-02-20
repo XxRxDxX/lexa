@@ -4,14 +4,8 @@ use Ignatiev\IgnatievException;
 use Ignatiev\MyLog;
 use Ignatiev\QuEquation;
 
-include "core/EquationInterface.php";
-include "core/LogAbstract.php";
-include "core/LogInterface.php";
-include "Ignatiev/MyLog.php";
-include "Ignatiev/Equation.php";
-include "Ignatiev/QuEquation.php";
-include  "Ignatiev/IgnatievException.php";
-//
+require __DIR__ . '/vendor/autoload.php';
+
 ini_set("display_errors", 1);
 error_reporting (-1);
 

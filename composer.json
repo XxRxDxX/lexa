@@ -1,0 +1,25 @@
+{
+  "name": "xxrxdxx/lexa",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Ignatiev Alexei",
+      "email": "frost8800@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/rok9ru/trpo-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/XxRxDxX/Ignatiev.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "rok9ru/trpo-core":"^2.0",
+    "xxrxdxx/ignatiev":"^1.0"
+  }
+}
